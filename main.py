@@ -6,45 +6,41 @@ import functools
 import re
 
 
-window_seat_weight = 1.7
+front_window_seat_weight = 1.5
+back_window_seat_weight = 1.7
 blinded_by_light_weight = 0.15
-better_window_weight = 0.4
+front_better_window_weight = 0.3
+back_better_window_weight = 0.3
 middle_taken_beside_weight = -1.0
-closer_to_front = 0.005 # per seat
+closer_to_front = 0.008 # per seat
 asile_seat_weight = 1.3
 leg_room_weight = 0.05
 sec1_weight = 0.01 #sections 2-5
 sec2_weight = 0.1 #sections 6-10
 sec3_weight = 0.1 #setion 11-12
 sec4_weight = 0.15 #sections 13-18
-sec5_weight = -0.5 #sections 19-23
+sec5_weight = -0.8 #sections 19-23
+seat_empty_beside = 2.0
 
+def get_seat_satus(seatID, seatlist):
+    for seat in seatlist:
+        if seatID == seat["xSeat"]: 
+                return seat["xSeatStatus"]
 
-    # prefered seat point system
-    # A or F -  -   -   -   -   +1.5    window_seat_weight
-    # A-C   -   -   -   -   -   +0.5    left_side_weight
-    # <= 10 A or F Even Seat    +1.0    better_window_weight
-    # >=13 A or F ODD Seat      +1.0    
-    # B taken beside A  -   -   -1.0    middle_taken_beside_weight
-    # E taken beside F  -   -   -1.0    
-    # closer to front points    +0.01/per start at back going to front      closer_to_front
-    # C or D    -   -   -   -   +1.0    asile_seat_weight
-    # taken     -   -   -   -   =0
-    #sections 2-5   -   -   -   +0.05   sec1_weight
-    #sections 6-10  -   -   -   +0.15   sec2_weight
-    #setion 11-12   -   -   -   +0.1    sec3_weight
-    #sections 13-18 -   -   -   +0.1    sec4_weight
-    #sections 19-23 -   -   -   +0.02   sec5_weight
 def score_seat(seatID, status, seatlist):
     points = 0.0 # base points
     seatLetter = re.sub(r'[0-9]', '', seatID)
     seatNumber = int(re.sub(r'[A-F]', '', seatID))
-    if seatLetter == "A" or seatLetter == "F":
-        points += window_seat_weight
-    if seatLetter == "A" or seatLetter == "B" or seatLetter == "C" or seatLetter == "F":
+    if seatNumber <= 10 and seatLetter == "A" or seatLetter == "F":
+        points += front_window_seat_weight
+    if seatNumber >= 13 and seatLetter == "A" or seatLetter == "F":
+        points += back_window_seat_weight
+    if seatNumber <= 10 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 0:
+        points += front_better_window_weight
+    if seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 0:
+        points += back_better_window_weight
+    if seatLetter == "A" or seatLetter == "C" or seatLetter == "F":
         points += blinded_by_light_weight
-    if (seatNumber <= 10 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 0) or (seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1):
-        points += better_window_weight
     if seatLetter == "C" or seatLetter == "D":
         points += asile_seat_weight
     if seatNumber == 1 or seatNumber == 11 or seatNumber == 12:
@@ -59,6 +55,10 @@ def score_seat(seatID, status, seatlist):
         points += sec4_weight
     if seatNumber <= 23 and seatNumber > 19:
         points += sec5_weight
+    if seatLetter == "A" and int(get_seat_satus('{seatNumber}B', seatlist)) > 0:
+        points += seat_empty_beside
+
+    
     
     
     row_multiplier = (23 - seatNumber ) * closer_to_front
@@ -112,7 +112,8 @@ flights = [x for x in allBookings if x["xType"] == "Charter"]
 
 camps = [x for x in allBookings if x["xType"] == "Camp"]
 
-for index in range(10):
+for index in range(1):
+    index = 9
     FromLocation = flights[index]["xFromLocation"]
     ToLocation = flights[index]["xToLocation"]
     StartDate = flights[index]["xStartDate"]
