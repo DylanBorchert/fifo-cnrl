@@ -1,0 +1,416 @@
+YYC - HZP | Date: Mar 06, 2023  | current seat is 7B and has 29 open seats : 1be8cc87-b911-11ed-bf5f-186024eba50f | best seat is 7B with 0.158 points
+7B with 0.158000 points
+7E with 0.158000 points
+8B with 0.155000 points
+8E with 0.155000 points
+9B with 0.152000 points
+Your seat selection has been confirmed. from current seat is 7B to 7B
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Mar 09, 2023  | current seat is 15A and has 47 open seats : 40125f67-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+14C with 3.727000 points
+17C with 3.718000 points
+19C with 3.712000 points
+14D with 3.627000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Mar 13, 2023  | current seat is 8C and has 21 open seats : 40125f69-8c5a-11ed-bf5c-186024eba50f | best seat is 8C with 1.2550000000000001 points
+8C with 1.255000 points
+9C with 1.252000 points
+13C with 1.180000 points
+6B with 0.161000 points
+7E with 0.158000 points
+Your seat selection has been confirmed. from current seat is 8C to 8C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Mar 16, 2023  | current seat is 17A and has 68 open seats : 40125f6b-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+14C with 3.727000 points
+15C with 3.724000 points
+17C with 3.718000 points
+18C with 3.715000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Mar 20, 2023  | current seat is 6D and has 30 open seats : 46995015-8c5a-11ed-bf5c-186024eba50f | best seat is 6D with 3.6610000000000005 points
+6D with 3.661000 points
+15D with 3.624000 points
+16D with 3.621000 points
+19F with 2.212000 points
+16C with 1.221000 points
+Your seat selection has been confirmed. from current seat is 6D to 6D
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Mar 23, 2023  | current seat is 8C and has 81 open seats : 46995017-8c5a-11ed-bf5c-186024eba50f | best seat is 8C with 3.755 points
+8C with 3.755000 points
+9C with 3.752000 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+Your seat selection has been confirmed. from current seat is 8C to 8C
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Mar 27, 2023  | current seat is 7D and has 26 open seats : 46995019-8c5a-11ed-bf5c-186024eba50f | best seat is 7D with 3.6580000000000004 points
+7D with 3.658000 points
+14D with 3.627000 points
+19D with 3.612000 points
+23D with 2.000000 points
+17C with 1.218000 points
+Your seat selection has been confirmed. from current seat is 7D to 7D
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Mar 30, 2023  | current seat is 17A and has 76 open seats : 4699501b-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+19F with 4.712000 points
+7C with 3.758000 points
+10C with 3.749000 points
+14C with 3.727000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Apr 03, 2023  | current seat is 7D and has 30 open seats : 4699501d-8c5a-11ed-bf5c-186024eba50f | best seat is 7D with 3.6580000000000004 points
+7D with 3.658000 points
+20D with 2.009000 points
+18C with 1.215000 points
+3C with 1.160000 points
+17D with 1.118000 points
+Your seat selection has been confirmed. from current seat is 7D to 7D
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Apr 06, 2023  | current seat is 19A and has 80 open seats : 4cc347f2-8c5a-11ed-bf5c-186024eba50f | best seat is 19A with 4.712 points
+19A with 4.712000 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+16C with 3.721000 points
+Your seat selection has been confirmed. from current seat is 19A to 19A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Apr 10, 2023  | current seat is 10C and has 35 open seats : 4cc347f4-8c5a-11ed-bf5c-186024eba50f | best seat is 10C with 3.749 points
+10C with 3.749000 points
+19D with 3.612000 points
+13D with 3.580000 points
+21F with 3.106000 points
+23F with 3.100000 points
+Your seat selection has been confirmed. from current seat is 10C to 10C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Apr 13, 2023  | current seat is 17A and has 84 open seats : 4cc347f6-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+19A with 4.712000 points
+19F with 4.712000 points
+2F with 4.463000 points
+8C with 3.755000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Apr 17, 2023  | current seat is 17C and has 33 open seats : 4cc347f8-8c5a-11ed-bf5c-186024eba50f | best seat is 17C with 3.718 points
+17C with 3.718000 points
+18C with 3.715000 points
+3D with 3.560000 points
+8C with 1.255000 points
+10C with 1.249000 points
+Your seat selection has been confirmed. from current seat is 17C to 17C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Apr 20, 2023  | current seat is 17A and has 82 open seats : 4cc347fa-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+10C with 3.749000 points
+14C with 3.727000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Apr 24, 2023  | current seat is 10D and has 35 open seats : 52d3077a-8c5a-11ed-bf5c-186024eba50f | best seat is 10D with 3.6490000000000005 points
+10D with 3.649000 points
+16D with 3.621000 points
+13D with 3.580000 points
+20D with 2.009000 points
+21D with 2.006000 points
+Your seat selection has been confirmed. from current seat is 10D to 10D
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Apr 27, 2023  | current seat is 15A and has 92 open seats : 52d3077c-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+15F with 4.724000 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: May 01, 2023  | current seat is 9C and has 40 open seats : 52d3077e-8c5a-11ed-bf5c-186024eba50f | best seat is 9C with 3.752 points
+9C with 3.752000 points
+14C with 3.727000 points
+12C with 3.683000 points
+4C with 3.657000 points
+5C with 3.654000 points
+Your seat selection has been confirmed. from current seat is 9C to 9C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: May 04, 2023  | current seat is 15F and has 100 open seats : 52d30780-8c5a-11ed-bf5c-186024eba50f | best seat is 15F with 4.724 points
+15F with 4.724000 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+19F with 4.712000 points
+Your seat selection has been confirmed. from current seat is 15F to 15F
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: May 08, 2023  | current seat is 15F and has 65 open seats : 52d30782-8c5a-11ed-bf5c-186024eba50f | best seat is 15F with 4.724 points
+15F with 4.724000 points
+17A with 4.718000 points
+19F with 4.712000 points
+10A with 4.549000 points
+2A with 4.463000 points
+Your seat selection has been confirmed. from current seat is 15F to 15F
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: May 11, 2023  | current seat is 15A and has 106 open seats : 52d30784-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+15F with 4.724000 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: May 15, 2023  | current seat is 17A and has 63 open seats : 596893d0-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+6C with 3.761000 points
+7C with 3.758000 points
+8C with 3.755000 points
+10C with 3.749000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: May 18, 2023  | current seat is 15A and has 107 open seats : 596893d2-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+15F with 4.724000 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: May 22, 2023  | current seat is 15A and has 90 open seats : 596893d4-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+17A with 4.718000 points
+19A with 4.712000 points
+13A with 4.680000 points
+10A with 4.549000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: May 25, 2023  | current seat is 15A and has 111 open seats : 596893d6-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+15F with 4.724000 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: May 29, 2023  | current seat is 15C and has 57 open seats : 30f7ea8d-b9e6-11ed-bf5f-186024eba50f | best seat is 15C with 3.724 points
+15C with 3.724000 points
+16C with 3.721000 points
+19C with 3.712000 points
+19D with 3.612000 points
+3F with 3.460000 points
+Your seat selection has been confirmed. from current seat is 15C to 15C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jun 01, 2023  | current seat is 15A and has 114 open seats : 596893da-8c5a-11ed-bf5c-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+15F with 4.724000 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jun 05, 2023  | current seat is 9C and has 59 open seats : 277788c4-a25a-11ed-bf5d-186024eba50f | best seat is 9C with 3.752 points
+9C with 3.752000 points
+10C with 3.749000 points
+17C with 3.718000 points
+19C with 3.712000 points
+13C with 3.680000 points
+Your seat selection has been confirmed. from current seat is 9C to 9C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jun 08, 2023  | current seat is 17C and has 49 open seats : c179c2b4-a707-11ed-bf5d-186024eba50f | best seat is 17C with 3.718 points
+17C with 3.718000 points
+19D with 3.612000 points
+23A with 3.100000 points
+23F with 3.100000 points
+20C with 2.109000 points
+Your seat selection has been confirmed. from current seat is 17C to 17C
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jun 12, 2023  | current seat is 15C and has 58 open seats : 77f129df-a25a-11ed-bf5d-186024eba50f | best seat is 15C with 3.724 points
+15C with 3.724000 points
+17C with 3.718000 points
+19C with 3.712000 points
+14D with 3.627000 points
+15D with 3.624000 points
+Your seat selection has been confirmed. from current seat is 15C to 15C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jun 15, 2023  | current seat is 15C and has 58 open seats : b704b698-a25c-11ed-bf5d-186024eba50f | best seat is 15C with 3.724 points
+15C with 3.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+18C with 3.715000 points
+19C with 3.712000 points
+Your seat selection has been confirmed. from current seat is 15C to 15C
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jun 19, 2023  | current seat is 7C and has 58 open seats : c643bd2c-a25a-11ed-bf5d-186024eba50f | best seat is 7C with 3.758 points
+7C with 3.758000 points
+8C with 3.755000 points
+9C with 3.752000 points
+15C with 3.724000 points
+17C with 3.718000 points
+Your seat selection has been confirmed. from current seat is 7C to 7C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jun 22, 2023  | current seat is 19D and has 50 open seats : 179f413d-a3ed-11ed-bf5d-186024eba50f | best seat is 19D with 3.612 points
+19D with 3.612000 points
+23A with 3.100000 points
+20A with 2.109000 points
+20F with 2.109000 points
+21C with 2.106000 points
+Your seat selection has been confirmed. from current seat is 19D to 19D
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jun 26, 2023  | current seat is 14F and has 53 open seats : f522ce10-a25a-11ed-bf5d-186024eba50f | best seat is 14F with 3.7270000000000003 points
+14F with 3.727000 points
+16C with 3.721000 points
+17C with 3.718000 points
+18C with 3.715000 points
+14D with 3.627000 points
+Your seat selection has been confirmed. from current seat is 14F to 14F
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jun 29, 2023  | current seat is 15A and has 56 open seats : 5dc72071-a25d-11ed-bf5d-186024eba50f | best seat is 15A with 4.724 points
+15A with 4.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+19C with 3.712000 points
+16D with 3.621000 points
+Your seat selection has been confirmed. from current seat is 15A to 15A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jul 04, 2023  | current seat is 14C and has 68 open seats : 66ec7058-8c5a-11ed-bf5c-186024eba50f | best seat is 14C with 3.7270000000000003 points
+14C with 3.727000 points
+15C with 3.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+19C with 3.712000 points
+Your seat selection has been confirmed. from current seat is 14C to 14C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jul 06, 2023  | current seat is 17A and has 72 open seats : 66ec705a-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+19A with 4.712000 points
+19F with 4.712000 points
+15C with 3.724000 points
+16C with 3.721000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jul 10, 2023  | current seat is 17F and has 71 open seats : 6d81d7a4-8c5a-11ed-bf5c-186024eba50f | best seat is 17F with 4.718 points
+17F with 4.718000 points
+7C with 3.758000 points
+8C with 3.755000 points
+14C with 3.727000 points
+16C with 3.721000 points
+Your seat selection has been confirmed. from current seat is 17F to 17F
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jul 13, 2023  | current seat is 19F and has 68 open seats : 6d81d7a6-8c5a-11ed-bf5c-186024eba50f | best seat is 19F with 4.712 points
+19F with 4.712000 points
+14C with 3.727000 points
+15C with 3.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+Your seat selection has been confirmed. from current seat is 19F to 19F
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jul 17, 2023  | current seat is 8C and has 68 open seats : 6d81d7a8-8c5a-11ed-bf5c-186024eba50f | best seat is 8C with 3.755 points
+8C with 3.755000 points
+10C with 3.749000 points
+14C with 3.727000 points
+16C with 3.721000 points
+17C with 3.718000 points
+Your seat selection has been confirmed. from current seat is 8C to 8C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jul 20, 2023  | current seat is 14C and has 66 open seats : 6d81d7aa-8c5a-11ed-bf5c-186024eba50f | best seat is 14C with 3.7270000000000003 points
+14C with 3.727000 points
+15C with 3.724000 points
+17C with 3.718000 points
+18C with 3.715000 points
+19C with 3.712000 points
+Your seat selection has been confirmed. from current seat is 14C to 14C
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jul 24, 2023  | current seat is 19F and has 75 open seats : 6d81d7ac-8c5a-11ed-bf5c-186024eba50f | best seat is 19F with 4.712 points
+19F with 4.712000 points
+7C with 3.758000 points
+8C with 3.755000 points
+10C with 3.749000 points
+14C with 3.727000 points
+Your seat selection has been confirmed. from current seat is 19F to 19F
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Jul 27, 2023  | current seat is 19A and has 63 open seats : 741705ca-8c5a-11ed-bf5c-186024eba50f | best seat is 19A with 4.712 points
+19A with 4.712000 points
+15C with 3.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+19C with 3.712000 points
+Your seat selection has been confirmed. from current seat is 19A to 19A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Jul 31, 2023  | current seat is 19F and has 70 open seats : 741705cc-8c5a-11ed-bf5c-186024eba50f | best seat is 19F with 4.712 points
+19F with 4.712000 points
+9C with 3.752000 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+Your seat selection has been confirmed. from current seat is 19F to 19F
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Aug 03, 2023  | current seat is 17A and has 74 open seats : 741705ce-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+19F with 4.712000 points
+14C with 3.727000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Aug 08, 2023  | current seat is 10A and has 73 open seats : 741705d0-8c5a-11ed-bf5c-186024eba50f | best seat is 10A with 4.5489999999999995 points
+10A with 4.549000 points
+8C with 3.755000 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+Your seat selection has been confirmed. from current seat is 10A to 10A
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Aug 10, 2023  | current seat is 17A and has 72 open seats : 741705d2-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+17F with 4.718000 points
+19A with 4.712000 points
+19F with 4.712000 points
+14C with 3.727000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Aug 14, 2023  | current seat is 17F and has 74 open seats : 7a52fcce-8c5a-11ed-bf5c-186024eba50f | best seat is 17F with 4.718 points
+17F with 4.718000 points
+19F with 4.712000 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+Your seat selection has been confirmed. from current seat is 17F to 17F
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Aug 17, 2023  | current seat is 19A and has 72 open seats : 7a52fcd0-8c5a-11ed-bf5c-186024eba50f | best seat is 19A with 4.712 points
+19A with 4.712000 points
+19F with 4.712000 points
+14C with 3.727000 points
+15C with 3.724000 points
+16A with 3.721000 points
+Your seat selection has been confirmed. from current seat is 19A to 19A
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Aug 21, 2023  | current seat is 10C and has 66 open seats : 7a52fcd2-8c5a-11ed-bf5c-186024eba50f | best seat is 10C with 3.749 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+Your seat selection has been confirmed. from current seat is 10C to 10C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Aug 24, 2023  | current seat is 17F and has 71 open seats : 7a52fcd4-8c5a-11ed-bf5c-186024eba50f | best seat is 17F with 4.718 points
+17F with 4.718000 points
+19F with 4.712000 points
+14C with 3.727000 points
+15C with 3.724000 points
+16C with 3.721000 points
+Your seat selection has been confirmed. from current seat is 17F to 17F
+----------------------------------------------------------------------------------------------------------------
+YYC - HZP | Date: Aug 28, 2023  | current seat is 10C and has 72 open seats : 7a52fcd6-8c5a-11ed-bf5c-186024eba50f | best seat is 10C with 3.749 points
+10C with 3.749000 points
+14C with 3.727000 points
+15C with 3.724000 points
+16C with 3.721000 points
+17C with 3.718000 points
+Your seat selection has been confirmed. from current seat is 10C to 10C
+----------------------------------------------------------------------------------------------------------------
+HZP - YYC | Date: Aug 31, 2023  | current seat is 17A and has 74 open seats : 808939e8-8c5a-11ed-bf5c-186024eba50f | best seat is 17A with 4.718 points
+17A with 4.718000 points
+19A with 4.712000 points
+19F with 4.712000 points
+10C with 3.749000 points
+14C with 3.727000 points
+Your seat selection has been confirmed. from current seat is 17A to 17A
+----------------------------------------------------------------------------------------------------------------

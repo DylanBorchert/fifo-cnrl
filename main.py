@@ -10,16 +10,17 @@ front_window_seat_weight = 0.8
 back_window_seat_weight = 1
 blinded_by_light_weight = 0.1
 front_better_window_weight = 1
-back_better_window_weight = 1
+back_better_window_weight = 1 # stop at 19
 closer_to_front = 0.003 # per seat
 asile_seat_weight = 1
 leg_room_weight = 0
-sec1_weight = 0.1 #sections 2-5
+sec1_weight = 0 #sections 2-5
 sec2_weight = 0.1 #sections 6-10
 sec3_weight = 0.05 #setion 11-12
-sec4_weight = 0.1 #sections 13-18
-sec5_weight = 1.5 #sections 19-23
+sec4_weight = 0.11 #sections 13-19
+sec5_weight = -1 #sections 20-23
 seat_empty_beside = 2.5
+avoid_middle_seats = -2.0
 
 def get_seat_satus(seatID, seatlist):
     for seat in seatlist:
@@ -39,7 +40,7 @@ def score_seat(seatID, status, seatlist):
 
     if seatNumber <= 10 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 0:
         points += front_better_window_weight
-    if seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1:
+    if (seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1) and seatNumber <= 19:
         points += back_better_window_weight
 
     if seatLetter == "A" or seatLetter == "C" or seatLetter == "F":
@@ -59,7 +60,10 @@ def score_seat(seatID, status, seatlist):
     if seatNumber <= 19 and seatNumber > 13:
         points += sec4_weight
     if seatNumber <= 23 and seatNumber > 19:
-        points -= sec5_weight
+        points += sec5_weight
+        
+    if seatLetter == "B" or seatLetter == "E":
+        points += avoid_middle_seats
 
     if (seatLetter == "A" or seatLetter == "C") and get_seat_satus(str(seatNumber)+"B", seatlist) == 0:
         points += seat_empty_beside
@@ -117,22 +121,21 @@ flights = [x for x in allBookings if x["xType"] == "Charter"]
 camps = [x for x in allBookings if x["xType"] == "Camp"]
 
 for index in range(1):
-    index = 5
     FromLocation = flights[index]["xFromLocation"]
     ToLocation = flights[index]["xToLocation"]
     StartDate = flights[index]["xStartDate"]
-    flightID = flights[index]["xGUID"]
+    flightKey = flights[index]["xGUID"]
     seatCode = flights[index]["xSeatRoomCode"]
 
     flightParams = {'xSid': 123, 'xCode': 'SYSAME019', 'xGUID': '',
-                    'xParameters': '{"xGUID":"'+flightID+'"}'}
+                    'xParameters': '{"xGUID":"'+flightKey+'"}'}
 
     flightResp = requests.get(
         'https://cnrl-cirysm-api.ccihive.com/api/v1/Uew/Get', params=flightParams)
 
     seats = json.loads(json.loads(flightResp.text)["xData"])["XBYL"]
     
-    seats = sorted(seats, key=functools.cmp_to_key(compare) )
+    seats = sorted(seats, key=functools.cmp_to_key(compare))
 
     for seat in seats:
         if seat["xSeat"] == seatCode:
@@ -140,14 +143,41 @@ for index in range(1):
 
     allSeats = [{"Seat": s["xSeat"], "SeatStatus": s["xSeatStatus"], "points": score_seat(s["xSeat"],s["xSeatStatus"],seats)} for s in seats]
     
+    if index == 0:
+        draw_plane([{"Seat": s["xSeat"], "SeatStatus": 0, "points": score_seat(s["xSeat"],0,[{"xSeat": s["xSeat"], "xSeatStatus": 0} for x in seats])} for s in seats])
+        print('----------------------------------------------------------------------------------------------------------------')
             
     openSeats = [x for x in allSeats if x["SeatStatus"] == 0]
     
     
     bestSeat = max(openSeats, key=lambda x:x['points'])
+    
+    print(f'{FromLocation} - {ToLocation} | Date: {StartDate} | current seat is {seatCode} and has {len(openSeats)} open seats : {flightKey} | best seat is {bestSeat["Seat"]} with {bestSeat["points"]} points')
+    
+    if bestSeat["Seat"] != seatCode:
+        print("################################ SEAT CHANGED ################################")
+    
+    
+        selectSeatParams = {'xSid': 123, 'xCode': 'SYSAME020', 'xGUID': '',
+                        'xParameters': '{"xLoginID":"1121972","xNewSeat":"'+str(bestSeat["Seat"])+'","xGUID":"'+str(flightKey)+'"}'}
 
-    print(f'{FromLocation} - {ToLocation} | Date: {StartDate} | current seat is {seatCode} and has {len(openSeats)} open seats : {flightID} | best seat is {bestSeat["Seat"]} with {bestSeat["points"]} points')
+        selectSeatResp = requests.get(
+            'https://cnrl-cirysm-api.ccihive.com/api/v1/Uew/Get', params=selectSeatParams)
 
-    draw_plane(allSeats)
+        print(json.loads(json.loads(selectSeatResp.text)["xData"])["XBYL"][0]["xMessage"] + f' | from current seat is {seatCode} to {bestSeat["Seat"]}')
+        print(f' | from current seat is {seatCode} to {bestSeat["Seat"]}')
+        draw_plane(allSeats)
+        print("##############################################################################")
+        rankedSteats = sorted(openSeats, key=lambda x: x['points'], reverse=True)
+        for i in range(5):
+            print(f'{rankedSteats[i]["Seat"]} with {rankedSteats[i]["points"]:2f} points')
+    else:
+        print("- - - - - - - - - - - - - - - - - KEEP SEAT  - - - - - - - - - - - - - - - - -")
+        rankedSteats = sorted(openSeats, key=lambda x: x['points'], reverse=True)
+        for i in range(5):
+            print(f'{rankedSteats[i]["Seat"]} with {rankedSteats[i]["points"]:2f} points')
+    print('----------------------------------------------------------------------------------------------------------------')
+
+
 
 
