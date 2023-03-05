@@ -120,7 +120,7 @@ flights = [x for x in allBookings if x["xType"] == "Charter"]
 
 camps = [x for x in allBookings if x["xType"] == "Camp"]
 
-for index in range(1):
+for index in range(10):
     FromLocation = flights[index]["xFromLocation"]
     ToLocation = flights[index]["xToLocation"]
     StartDate = flights[index]["xStartDate"]
