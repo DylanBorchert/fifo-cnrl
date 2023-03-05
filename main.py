@@ -144,8 +144,9 @@ for index in range(1):
     allSeats = [{"Seat": s["xSeat"], "SeatStatus": s["xSeatStatus"], "points": score_seat(s["xSeat"],s["xSeatStatus"],seats)} for s in seats]
     
     if index == 0:
+        print('-----------------SEAT SCORING ALL SEATS--------------')
         draw_plane([{"Seat": s["xSeat"], "SeatStatus": 0, "points": score_seat(s["xSeat"],0,[{"xSeat": s["xSeat"], "xSeatStatus": 0} for x in seats])} for s in seats])
-        print('----------------------------------------------------------------------------------------------------------------')
+        print('-----------------------------------------------------')
             
     openSeats = [x for x in allSeats if x["SeatStatus"] == 0]
     
