@@ -9,7 +9,7 @@ import functools
 import re
 
 #your user id, can get get from profile page on site
-cirys_id = '1121972'
+cirys_id = ''
 
 #this will enable steat changing, enabl once you dial in your seat scoring
 ENABLE_SEAT_CHANGE = False
@@ -24,11 +24,11 @@ back_window_seat_weight = 1
 #seats that where you get blinded by the light
 blinded_by_light_weight = 0.1
 #window seats that have extra shoulder room front half of plane
-front_better_window_weight = 1
+front_better_window_weight = 0.3
 #window seats that have extra shoulder room back half of plane
-back_better_window_weight = 1 
+back_better_window_weight = 0.2 
 #row to stop back_better_window_weight 
-back_better_window_row = 19
+back_stop_point = 19
 # scaling per seet closer to front
 closer_to_front = 0.003
 #weighting for asile seats
@@ -44,9 +44,11 @@ sec3_weight = 0.05
 #sections weights 13-19
 sec4_weight = 0.11 
 #sections 20-23
-sec5_weight = -1 
-#weighting for empty seat beside
-seat_empty_beside = 2.5
+sec5_weight = 0
+#weighting for empty seat beside front 
+seat_empty_beside_front = 2.0
+#weighting for empty seat beside back
+seat_empty_beside_back = 1.0
 #weighting to for middle seats (negative to avoid)
 middle_seats = -2.0
 
@@ -68,7 +70,7 @@ def score_seat(seatID, status, seatlist):
 
     if seatNumber <= 10 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 0:
         points += front_better_window_weight
-    if (seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1) and seatNumber <= back_better_window_row:
+    if (seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1) and seatNumber <= back_stop_point:
         points += back_better_window_weight
 
     if seatLetter == "A" or seatLetter == "C" or seatLetter == "F":
@@ -94,9 +96,15 @@ def score_seat(seatID, status, seatlist):
         points += middle_seats
 
     if (seatLetter == "A" or seatLetter == "C") and get_seat_satus(str(seatNumber)+"B", seatlist) == 0:
-        points += seat_empty_beside
+        if seatNumber <= 10:
+            points += seat_empty_beside_front
+        elif seatNumber <= back_stop_point:
+            points += seat_empty_beside_back
     if (seatLetter == "D" or seatLetter == "F") and get_seat_satus(str(seatNumber)+"E", seatlist) == 0:
-        points += seat_empty_beside
+        if seatNumber <= 10:
+            points += seat_empty_beside_front
+        elif seatNumber <= back_stop_point:
+            points += seat_empty_beside_back
 
     row_multiplier = (23 - seatNumber ) * closer_to_front
     points += row_multiplier
