@@ -1,26 +1,54 @@
-# import extention for api requests
-import requests
+# import requests library using command:
+# python -m pip install requests
+import requests 
+
+#python defualts 
 import json
 import pprint
 import functools
 import re
 
+#your user id, can get get from profile page on site
+cirys_id = '1121972'
 
-front_window_seat_weight = 0.8
+#this will enable steat changing, enabl once you dial in your seat scoring
+ENABLE_SEAT_CHANGE = False
+
+#number of consecutive flights to check, -1 will check all
+consecutive_flights = 10
+
+#weighting for front half window seats
+front_window_seat_weight = 0.8 
+#weighting for back half window seats
 back_window_seat_weight = 1
+#seats that where you get blinded by the light
 blinded_by_light_weight = 0.1
+#window seats that have extra shoulder room front half of plane
 front_better_window_weight = 1
-back_better_window_weight = 1 # stop at 19
-closer_to_front = 0.003 # per seat
+#window seats that have extra shoulder room back half of plane
+back_better_window_weight = 1 
+#row to stop back_better_window_weight 
+back_better_window_row = 19
+# scaling per seet closer to front
+closer_to_front = 0.003
+#weighting for asile seats
 asile_seat_weight = 1
+#leg room weight, includes row 1 and 11-12
 leg_room_weight = 0
-sec1_weight = 0 #sections 2-5
-sec2_weight = 0.1 #sections 6-10
-sec3_weight = 0.05 #setion 11-12
-sec4_weight = 0.11 #sections 13-19
-sec5_weight = -1 #sections 20-23
+#section weights 2-5
+sec1_weight = 0 
+#section weights 6-10
+sec2_weight = 0.1 
+#setion weights 11-12
+sec3_weight = 0.05 
+#sections weights 13-19
+sec4_weight = 0.11 
+#sections 20-23
+sec5_weight = -1 
+#weighting for empty seat beside
 seat_empty_beside = 2.5
-avoid_middle_seats = -2.0
+#weighting to for middle seats (negative to avoid)
+middle_seats = -2.0
 
 def get_seat_satus(seatID, seatlist):
     for seat in seatlist:
@@ -40,7 +68,7 @@ def score_seat(seatID, status, seatlist):
 
     if seatNumber <= 10 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 0:
         points += front_better_window_weight
-    if (seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1) and seatNumber <= 19:
+    if (seatNumber >= 13 and (seatLetter == "A" or seatLetter == "F") and seatNumber % 2 == 1) and seatNumber <= back_better_window_row:
         points += back_better_window_weight
 
     if seatLetter == "A" or seatLetter == "C" or seatLetter == "F":
@@ -63,7 +91,7 @@ def score_seat(seatID, status, seatlist):
         points += sec5_weight
         
     if seatLetter == "B" or seatLetter == "E":
-        points += avoid_middle_seats
+        points += middle_seats
 
     if (seatLetter == "A" or seatLetter == "C") and get_seat_satus(str(seatNumber)+"B", seatlist) == 0:
         points += seat_empty_beside
@@ -106,7 +134,7 @@ def draw_plane(seatlist):
         
 
 profileParams = {'xSid': 123, 'xCode': 'SYSAME001', 'xGUID': '',
-                 'xParameters': '{"xStatus":1,"xReturnQuantity":9999,"xEmployee_ID":"1121972","xStartDate":null,"xEndDate":null}'}
+                 'xParameters': '{"xStatus":1,"xReturnQuantity":9999,"xEmployee_ID":' + cirys_id + ',"xStartDate":null,"xEndDate":null}'}
 
 profileResp = requests.get(
     'https://cnrl-cirysm-api.ccihive.com/api/v1/Uew/Get', params=profileParams)
@@ -120,7 +148,14 @@ flights = [x for x in allBookings if x["xType"] == "Charter"]
 
 camps = [x for x in allBookings if x["xType"] == "Camp"]
 
-for index in range(10):
+
+
+if consecutive_flights == -1: 
+    num_flights = len(flights) 
+else: 
+    num_flights = consecutive_flights
+
+for index in range(num_flights):
     FromLocation = flights[index]["xFromLocation"]
     ToLocation = flights[index]["xToLocation"]
     StartDate = flights[index]["xStartDate"]
@@ -155,12 +190,12 @@ for index in range(10):
     
     print(f'{FromLocation} - {ToLocation} | Date: {StartDate} | current seat is {seatCode} and has {len(openSeats)} open seats : {flightKey} | best seat is {bestSeat["Seat"]} with {bestSeat["points"]} points')
     
-    if bestSeat["Seat"] != seatCode:
+    if bestSeat["Seat"] != seatCode and ENABLE_SEAT_CHANGE:
         print("################################ SEAT CHANGED ################################")
     
     
         selectSeatParams = {'xSid': 123, 'xCode': 'SYSAME020', 'xGUID': '',
-                        'xParameters': '{"xLoginID":"1121972","xNewSeat":"'+str(bestSeat["Seat"])+'","xGUID":"'+str(flightKey)+'"}'}
+                        'xParameters': '{"xLoginID":'+ cirys_id +',"xNewSeat":"'+str(bestSeat["Seat"])+'","xGUID":"'+str(flightKey)+'"}'}
 
         selectSeatResp = requests.get(
             'https://cnrl-cirysm-api.ccihive.com/api/v1/Uew/Get', params=selectSeatParams)
