@@ -18,11 +18,11 @@ ENABLE_SEAT_CHANGE = False
 consecutive_flights = 10
 
 #weighting for front half window seats
-front_window_seat_weight = 0.8 
+front_window_seat_weight = 1 
 #weighting for back half window seats
 back_window_seat_weight = 1
 #seats that where you get blinded by the light
-blinded_by_light_weight = 0.1
+blinded_by_light_weight = 0
 #window seats that have extra shoulder room front half of plane
 front_better_window_weight = 0.3
 #window seats that have extra shoulder room back half of plane
@@ -161,7 +161,7 @@ camps = [x for x in allBookings if x["xType"] == "Camp"]
 if consecutive_flights == -1: 
     num_flights = len(flights) 
 else: 
-    num_flights = consecutive_flights
+    num_flights = min(consecutive_flights, len(flights))
 
 for index in range(num_flights):
     FromLocation = flights[index]["xFromLocation"]
@@ -198,18 +198,20 @@ for index in range(num_flights):
     
     print(f'{FromLocation} - {ToLocation} | Date: {StartDate} | current seat is {seatCode} and has {len(openSeats)} open seats : {flightKey} | best seat is {bestSeat["Seat"]} with {bestSeat["points"]} points')
     
-    if bestSeat["Seat"] != seatCode and ENABLE_SEAT_CHANGE:
-        print("################################ SEAT CHANGED ################################")
-    
-    
-        selectSeatParams = {'xSid': 123, 'xCode': 'SYSAME020', 'xGUID': '',
+    if bestSeat["Seat"] != seatCode:
+        if ENABLE_SEAT_CHANGE:
+            print("################################ SEAT CHANGED ################################")
+            selectSeatParams = {'xSid': 123, 'xCode': 'SYSAME020', 'xGUID': '',
                         'xParameters': '{"xLoginID":'+ cirys_id +',"xNewSeat":"'+str(bestSeat["Seat"])+'","xGUID":"'+str(flightKey)+'"}'}
 
-        selectSeatResp = requests.get(
-            'https://cnrl-cirysm-api.ccihive.com/api/v1/Uew/Get', params=selectSeatParams)
+            selectSeatResp = requests.get(
+                'https://cnrl-cirysm-api.ccihive.com/api/v1/Uew/Get', params=selectSeatParams)
 
-        print(json.loads(json.loads(selectSeatResp.text)["xData"])["XBYL"][0]["xMessage"] + f' | from current seat is {seatCode} to {bestSeat["Seat"]}')
-        print(f' | from current seat is {seatCode} to {bestSeat["Seat"]}')
+            print(json.loads(json.loads(selectSeatResp.text)["xData"])["XBYL"][0]["xMessage"] + f' \n Changed from {seatCode} to {bestSeat["Seat"]}')
+        else:
+            print("############################### POSSIBLE CHANGE ##############################")
+            print(f'Recommend changing from {seatCode} to {bestSeat["Seat"]}')
+        
         draw_plane(allSeats)
         print("##############################################################################")
         rankedSteats = sorted(openSeats, key=lambda x: x['points'], reverse=True)
